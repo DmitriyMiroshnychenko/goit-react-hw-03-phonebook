@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import { ContactForm } from './ContactForm';
 import { ContactList } from './ContactList';
-import { Filter } from './Filter/Filter';
-import { Notification } from './Notification/Nitification';
+import { Notification } from './Notification';
+import { Filter } from './Filter';
 import { customAlphabet } from 'nanoid';
 
 const nanoid = customAlphabet('1234567890', 8);
@@ -64,6 +64,7 @@ export class App extends Component {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
+
   render() {
     const { contacts, filter } = this.state;
 

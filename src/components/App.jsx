@@ -39,8 +39,10 @@ export class App extends Component {
       this.state.contacts.some(
         contact => contact.name.toLowerCase() === data.name.toLowerCase()
       )
-    )
-      return;
+    ) {
+      return alert(`${data.name} is already in contacts`);
+    }
+
     this.setState(prevState => ({ contacts: [...prevState.contacts, data] }));
   };
 
